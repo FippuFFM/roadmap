@@ -300,6 +300,16 @@
     border-left-color: var(--warn);
   }
 
+  .phase.done .node {
+    border-color: var(--accent-2);
+    color: var(--accent-2);
+    box-shadow: 0 0 0 4px rgba(124,138,78,0.12);
+  }
+
+  .phase.done .card {
+    border-left-color: var(--accent-2);
+  }
+
   .card-num {
     position: absolute;
     right: 14px;
@@ -409,6 +419,8 @@
     .phase:nth-child(4) { animation-delay: 0.20s; }
     .phase:nth-child(5) { animation-delay: 0.26s; }
     .phase:nth-child(6) { animation-delay: 0.32s; }
+    .phase:nth-child(7) { animation-delay: 0.38s; }
+    .phase:nth-child(8) { animation-delay: 0.44s; }
     @keyframes rise {
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
@@ -423,8 +435,8 @@
     <h1>Die <span>Roadmap</span></h1>
     <p class="lede">Chernarus ist erst der Anfang. Hier seht ihr, wohin die Reise als N&auml;chstes geht &mdash; vom Server-Fundament bis zur n&auml;chsten Karte.</p>
     <div class="meta-row">
-      <span><strong>Stand:</strong> 17.08.2026</span>
-      <span><strong>Phasen:</strong> 6</span>
+      <span><strong>Stand:</strong> 21.08.2026</span>
+      <span><strong>Phasen:</strong> 8</span>
       <span><strong>Reihenfolge:</strong> vorl&auml;ufig, kann sich verschieben</span>
     </div>
     <div class="legend">
@@ -452,21 +464,105 @@
           </div>
           <span class="chip wip">In Arbeit</span>
         </div>
-        <p class="desc">Bevor neue Inhalte kommen, muss das Fundament stimmen. Weniger Lags, mehr Stabilit&auml;t &mdash; das ist die Basis f&uuml;r alles Weitere.</p>
+        <p class="desc">Bevor neue Inhalte kommen, muss das Fundament stimmen. Weniger Lags, mehr Stabilit&auml;t &mdash; das ist die Basis f&uuml;r alles Weitere. Der Umzug l&auml;uft bereits im Hintergrund und ist in den letzten Z&uuml;gen.</p>
         <ul class="obj">
           <li>Umzug auf einen eigenen Root-Server f&uuml;r mehr Leistung</li>
-          <li>Spieler- und Mod-Anzahl werden bewusst aufeinander abgestimmt, damit die Performance stabil bleibt</li>
+          <li>60 Spieler-Slots</li>
+          <li>Spieler- und Mod-Anzahl werden bewusst aufeinander abgestimmt, damit die Performance stabil bleibt &mdash; auch mit Blick auf die zweite Map</li>
         </ul>
       </div>
     </div>
 
-    <div class="phase">
+    <div class="phase done">
       <div class="node">02</div>
       <div class="card">
         <div class="card-num">02</div>
         <div class="card-top">
           <div>
-            <p class="phase-label">Phase 02 &middot; Baubarkeit</p>
+            <p class="phase-label">Phase 02 &middot; Erweiterung</p>
+            <h2>Banditen-KI-Erweiterung</h2>
+          </div>
+          <span class="chip done">Erledigt</span>
+        </div>
+        <p class="desc">Live im Einsatz bei Serverumzug: komplett neues KI-System mit allen Features &mdash; deutlich krasser und fordernder als vorher.</p>
+        <ul class="obj">
+          <li>Taktische Ausr&uuml;stung und Waffen</li>
+          <li>Gehen in Deckung, umkreisen euch und nehmen euch in die Zange</li>
+          <li>Folgen euch sogar in H&auml;user und suchen aktiv nach euch</li>
+          <li>Kein Gekuschel mehr &mdash; sie wissen was sie tun</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase done">
+      <div class="node">03</div>
+      <div class="card">
+        <div class="card-num">03</div>
+        <div class="card-top">
+          <div>
+            <p class="phase-label">Phase 03 &middot; Neue Bedrohung</p>
+            <h2>Zombie-KI-Mod &mdash; InediaInfectedAI</h2>
+          </div>
+          <span class="chip done">Erledigt</span>
+        </div>
+        <p class="desc">Live im Einsatz bei Serverumzug: eine komplett andere, viel bessere KI f&uuml;r die Infizierten &mdash; inklusive eigenem, erweitertem Medizin-System.</p>
+        <ul class="obj">
+          <li>H&ouml;ren, sehen und riechen euch jetzt richtig</li>
+          <li>Schreien beim Entdecken eines Spielers und alarmieren damit andere Zombies in der N&auml;he</li>
+          <li>K&ouml;nnen klettern, euch entwaffnen, T&uuml;ren aufbrechen und Sachen nach euch werfen</li>
+          <li>Verursachen bei Treffern Knochenbr&uuml;che, Sehst&ouml;rungen und Benommenheit</li>
+          <li>Nicht zu extrem, aber anspruchsvoller als der klassische kleine Kratzer, der einfach nur blutet</li>
+          <li>Erweitertes Medizin-System zum Aufp&auml;ppeln &mdash; separates Erkl&auml;rvideo folgt noch</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase wip">
+      <div class="node">04</div>
+      <div class="card">
+        <div class="card-num">04</div>
+        <div class="card-top">
+          <div>
+            <p class="phase-label">Phase 04 &middot; Feinschliff</p>
+            <h2>Balancing &amp; Anpassung der KI</h2>
+          </div>
+          <span class="chip wip">In Arbeit</span>
+        </div>
+        <p class="desc">Banditen und Zombies sind live, aber die Feinjustierung h&ouml;rt hier nicht auf &mdash; fordernd, aber fair soll es bleiben.</p>
+        <ul class="obj">
+          <li>Laufende Anpassung von Verhalten, St&auml;rke und Ausr&uuml;stung der Banditen-KI</li>
+          <li>Laufende Anpassung der Zombie-KI und des Medizin-Systems</li>
+          <li>Basierend auf eurem Feedback aus dem Spiel</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="node">05</div>
+      <div class="card">
+        <div class="card-num">05</div>
+        <div class="card-top">
+          <div>
+            <p class="phase-label">Phase 05 &middot; Neue Funktionen</p>
+            <h2>Neue KI-Funktionen</h2>
+          </div>
+          <span class="chip planned">Geplant</span>
+        </div>
+        <p class="desc">Weitere KI-Features, die noch mehr Leben und Gefahr auf die Karte bringen.</p>
+        <ul class="obj">
+          <li>Konvois</li>
+          <li>Keycard-System f&uuml;r geheime R&auml;ume</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="node">06</div>
+      <div class="card">
+        <div class="card-num">06</div>
+        <div class="card-top">
+          <div>
+            <p class="phase-label">Phase 06 &middot; Baubarkeit</p>
             <h2>Base Building &mdash; RA Base Building</h2>
           </div>
           <span class="chip planned">Geplant</span>
@@ -481,54 +577,13 @@
       </div>
     </div>
 
-    <div class="phase wip">
-      <div class="node">03</div>
-      <div class="card">
-        <div class="card-num">03</div>
-        <div class="card-top">
-          <div>
-            <p class="phase-label">Phase 03 &middot; Feinschliff</p>
-            <h2>KI-Balancing der Banditen</h2>
-          </div>
-          <span class="chip wip">In Arbeit</span>
-        </div>
-        <p class="desc">Die Banditen-KI wird laufend weiter angepasst &mdash; fordernd, aber fair soll es bleiben.</p>
-        <ul class="obj">
-          <li>Verhalten, St&auml;rke und Ausr&uuml;stung der Banditen werden weiter feinjustiert</li>
-          <li>Laufende Anpassungen auf Basis von eurem Feedback aus dem Spiel</li>
-        </ul>
-      </div>
-    </div>
-
     <div class="phase">
-      <div class="node">04</div>
+      <div class="node">07</div>
       <div class="card">
-        <div class="card-num">04</div>
+        <div class="card-num">07</div>
         <div class="card-top">
           <div>
-            <p class="phase-label">Phase 04 &middot; Neue Bedrohung</p>
-            <h2>Zombie-KI-Mod &mdash; InediaInfectedAI</h2>
-          </div>
-          <span class="chip planned">Geplant</span>
-        </div>
-        <p class="desc">Kein neuer Gegnertyp, sondern ein komplettes KI-&Uuml;berarbeitung der Infizierten: h&ouml;rt, sieht und riecht euch &mdash; und merkt sich, wo ihr wart.</p>
-        <ul class="obj">
-          <li>Bessere Sinne: h&ouml;ren, sehen, riechen &mdash; nachts schlechte Sicht, aber weiterhin gutes Geh&ouml;r</li>
-          <li>Schreien beim Entdecken eines Spielers und alarmieren damit andere Zombies in der N&auml;he</li>
-          <li>Treten T&uuml;ren ein, springen &uuml;ber Hindernisse und k&ouml;nnen euch von Mauern reissen</li>
-          <li>Eigenes Blut- und Verletzungssystem: Blutungen, Frakturen, Krankheits&uuml;bertragung bei Treffern</li>
-          <li>Fahrzeuge nehmen bei Kollisionen mit Zombies Schaden</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="phase">
-      <div class="node">05</div>
-      <div class="card">
-        <div class="card-num">05</div>
-        <div class="card-top">
-          <div>
-            <p class="phase-label">Phase 05 &middot; Expansion</p>
+            <p class="phase-label">Phase 07 &middot; Expansion</p>
             <h2>Deer Isle &amp; Hafen-Teleport</h2>
           </div>
           <span class="chip planned">Geplant</span>
@@ -542,17 +597,17 @@
     </div>
 
     <div class="phase">
-      <div class="node">06</div>
+      <div class="node">08</div>
       <div class="card">
-        <div class="card-num">06</div>
+        <div class="card-num">08</div>
         <div class="card-top">
           <div>
-            <p class="phase-label">Phase 06 &middot; Neuordnung</p>
+            <p class="phase-label">Phase 08 &middot; Neuordnung</p>
             <h2>Badlands als zweite Karte</h2>
           </div>
           <span class="chip planned">Geplant</span>
         </div>
-        <p class="desc">Sobald die Mod-Unterst&uuml;tzung f&uuml;r Badlands steht, wird die Karte fest eingebunden &mdash; auf Basis der Cluster-Technik aus Phase 4.</p>
+        <p class="desc">Sobald die Mod-Unterst&uuml;tzung f&uuml;r Badlands steht, wird die Karte fest eingebunden &mdash; auf Basis der Cluster-Technik aus Phase 7.</p>
         <ul class="obj">
           <li>Einbindung von Badlands, sobald die n&ouml;tige Mod-Unterst&uuml;tzung vorliegt</li>
         </ul>
